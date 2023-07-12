@@ -48,5 +48,21 @@ namespace Tests
             //Assert
             Assert.ThrowsException<InvalidObjectPassedInException>(() => { logic.Solve(data); });
         }
+
+        [TestMethod]
+        public void Solve_ReturnsNumbersWhenNothingDivisibleBy3or5()
+        {
+            //Arrange
+            IFizzBuzzLogic logic = new FizzBuzzLogic();
+
+            //Act
+            List<object> data = new()
+            {
+                1,7,11,19
+            };
+
+            //Assert
+            CollectionAssert.AreEqual(data.Select(a => a.ToString()).ToList(), logic.Solve(data).ToList()); //TODO : find a better way of doing this not ToList
+        }
     }
 }
