@@ -2,7 +2,7 @@
 {
     public class FizzBuzzLogic : IFizzBuzzLogic
     {
-        public IEnumerable<string> Solve(IEnumerable<object> data)
+        public List<string> Solve(IEnumerable<object> data)
         {
             List<string> result = new();
 

@@ -62,7 +62,25 @@ namespace Tests
             };
 
             //Assert
-            CollectionAssert.AreEqual(data.Select(a => a.ToString()).ToList(), logic.Solve(data).ToList()); //TODO : find a better way of doing this not ToList
+            CollectionAssert.AreEqual(data.Select(a => a.ToString()).ToList(), logic.Solve(data)); 
+        }
+
+        [TestMethod]
+        public void Solve_ReturnsFizzWhenDivisibleBy3InRange()
+        {
+            //Arrange
+            IFizzBuzzLogic logic = new FizzBuzzLogic();
+
+            //Act
+            List<object> data = new()
+            {
+                3,6,9,12,66,99
+            };
+
+            List<string> result = data.Select(a => "Fizz").ToList();
+
+            //Assert
+            CollectionAssert.AreEqual(result, logic.Solve(data));
         }
     }
 }

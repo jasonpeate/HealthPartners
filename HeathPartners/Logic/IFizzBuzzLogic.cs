@@ -8,6 +8,6 @@ namespace Logic
 {
     public interface IFizzBuzzLogic
     {
-        IEnumerable<string> Solve(IEnumerable<object> data);
+        List<string> Solve(IEnumerable<object> data);
     }
 }
