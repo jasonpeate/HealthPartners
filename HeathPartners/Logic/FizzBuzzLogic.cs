@@ -18,9 +18,13 @@
         {
             int NumberToProcess = IsValid();
 
-            if ((NumberToProcess % 3) == 0)
+            if (IsDivisibleBy(3))
             {
                 return Constants.Fizz;
+            } 
+            else if (IsDivisibleBy(5))
+            {
+                return Constants.Buzz;
             }
 
             return NumberToProcess.ToString();
@@ -40,6 +44,11 @@
                 {
                     throw new InvalidObjectPassedInException();
                 }
+            }
+
+            bool IsDivisibleBy(int divisible)
+            {
+                return (NumberToProcess % divisible) == 0;
             }
         }
 
