@@ -7,3 +7,5 @@
 /.vs
 /HeathPartners/Presentation/obj
 /HeathPartners/Tests/obj
+/HeathPartners/Tests/bin
+/HeathPartners/Logic/bin/Debug/net7.0
