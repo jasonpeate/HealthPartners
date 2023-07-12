@@ -28,10 +28,11 @@
                     }
 
                     return AsNumber;
+                } 
+                else
+                {
+                    throw new InvalidObjectPassedInException();
                 }
-
-                return -1;
-
             }
         }
 
