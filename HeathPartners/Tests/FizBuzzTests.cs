@@ -118,5 +118,24 @@ namespace Tests
             //Assert
             CollectionAssert.AreEqual(result, logic.Solve(data));
         }
+
+
+        [TestMethod]
+        public void Solve_ReturnsBuzzWhenDivisibleBy5InRange()
+        {
+            //Arrange
+            IFizzBuzzLogic logic = new FizzBuzzLogic();
+
+            //Act
+            List<object> data = new()
+            {
+                5,25,40
+            };
+
+            List<string> result = data.Select(a => Constants.Buzz).ToList();
+
+            //Assert
+            CollectionAssert.AreEqual(result, logic.Solve(data));
+        }
     }
 }
