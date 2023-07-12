@@ -8,7 +8,10 @@ namespace Tests
 
 
         [TestMethod]
-        public void Solve_ThrowsExceptionWhenOutOfRange()
+        [DataRow(-2)]
+        [DataRow(105)]
+        [DataRow(0)]
+        public void Solve_ThrowsExceptionWhenOutOfRange(int input)
         {
             //Arrange
             IFizzBuzzLogic logic = new FizzBuzzLogic();
@@ -16,7 +19,7 @@ namespace Tests
             //Act
             List<object> data = new()
             {
-                -1
+                input
             };
 
             //Assert
