@@ -35,8 +35,10 @@
 
             int IsValid()
             {
-                if (Number is int AsNumber)
+                if (Number.GetType() == typeof(Int32)) //using reflection
                 {
+                    int AsNumber = Convert.ToInt32(Number);
+
                     if (AsNumber < 1 || AsNumber > 100)
                     {
                         throw new InvalidObjectPassedInException();
