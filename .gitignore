@@ -1,0 +1,9 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/HeathPartners/Logic/obj
+/HeathPartners/.vs/HeathPartners
+/.vs
+/HeathPartners/Presentation/obj
+/HeathPartners/Tests/obj
