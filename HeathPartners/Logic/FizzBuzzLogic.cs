@@ -18,7 +18,11 @@
         {
             int NumberToProcess = IsValid();
 
-            if (IsDivisibleBy(3))
+            if (IsDivisibleBy(3) && IsDivisibleBy(5))
+            {
+                return Constants.FizzBuzz;
+            }
+            else if (IsDivisibleBy(3))
             {
                 return Constants.Fizz;
             } 

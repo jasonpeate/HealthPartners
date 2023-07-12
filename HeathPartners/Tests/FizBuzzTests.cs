@@ -213,7 +213,7 @@ namespace Tests
             {
                 if (a is int toProcess)
                 {
-                    if ((toProcess % 5) == 0)
+                    if ((toProcess % 5) == 0 && (toProcess % 3) == 0)
                     {
                         result.Add(Constants.FizzBuzz);
                     }
