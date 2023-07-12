@@ -1,0 +1,16 @@
+Fizz buz
+
+Range between 1 and 100
+
+if / by 3 then replace number with Fizz
+if / by 5 then replace number with Buzz
+If both the FizzBuzz
+else return number
+
+returning a collection of strings,
+input numbers
+
+
+
+
+Reflection - gettype
