@@ -25,5 +25,23 @@ namespace Tests
             //Assert
             Assert.ThrowsException<InvalidObjectPassedInException>(() => { logic.Solve(data); });
         }
+
+        [TestMethod]
+        [DataRow("asdfasdfas")]
+        [DataRow(10.9999)]
+        public void Solve_ThrowsExceptionWhenNotAInterger(object input)
+        {
+            //Arrange
+            IFizzBuzzLogic logic = new FizzBuzzLogic();
+
+            //Act
+            List<object> data = new()
+            {
+                input
+            };
+
+            //Assert
+            Assert.ThrowsException<InvalidObjectPassedInException>(() => { logic.Solve(data); });
+        }
     }
 }
