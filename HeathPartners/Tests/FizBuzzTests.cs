@@ -77,7 +77,43 @@ namespace Tests
                 3,6,9,12,66,99
             };
 
-            List<string> result = data.Select(a => "Fizz").ToList();
+            List<string> result = data.Select(a => Constants.Fizz).ToList();
+
+            //Assert
+            CollectionAssert.AreEqual(result, logic.Solve(data));
+        }
+
+        [TestMethod]
+        [DataRow(11)]
+        [DataRow(19)]
+        [DataRow(37)]
+        public void Solve_ReturnsFizzWhenDivisibleBy3WithNumbersInRange(object input)
+        {
+            //Arrange
+            IFizzBuzzLogic logic = new FizzBuzzLogic();
+
+            //Act
+            List<object> data = new()
+            {
+                3,6,9,12,66,99,input
+            };
+
+            List<string> result = new();
+
+            data.ForEach(a =>
+            {
+                if (a is int toProcess)
+                {
+                    if ((toProcess % 3) == 0)
+                    {
+                        result.Add(Constants.Fizz);
+                    }
+                    else
+                    {
+                        result.Add(toProcess.ToString());
+                    }
+                }
+            });
 
             //Assert
             CollectionAssert.AreEqual(result, logic.Solve(data));

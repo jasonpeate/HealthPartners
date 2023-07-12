@@ -18,6 +18,11 @@
         {
             int NumberToProcess = IsValid();
 
+            if ((NumberToProcess % 3) == 0)
+            {
+                return Constants.Fizz;
+            }
+
             return NumberToProcess.ToString();
 
             int IsValid()
