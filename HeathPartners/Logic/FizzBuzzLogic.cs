@@ -4,19 +4,21 @@
     {
         public IEnumerable<string> Solve(IEnumerable<object> data)
         {
+            List<string> result = new();
+
             foreach (var item in data) 
             {
-                _ = ProcessSingleRow(item);
+                result.Add(ProcessSingleRow(item));
             }
 
-            return null;
+            return result;
         }
 
         private string ProcessSingleRow(object Number)
         {
-            IsValid();
+            int NumberToProcess = IsValid();
 
-            return null;
+            return NumberToProcess.ToString();
 
             int IsValid()
             {
