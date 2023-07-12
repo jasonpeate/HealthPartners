@@ -19,7 +19,10 @@ namespace Tests
             //Act
             List<object> data = new()
             {
-                input
+                10,
+                20,
+                input,
+                90
             };
 
             //Assert
@@ -37,7 +40,9 @@ namespace Tests
             //Act
             List<object> data = new()
             {
-                input
+                9,
+                input,
+                8
             };
 
             //Assert
