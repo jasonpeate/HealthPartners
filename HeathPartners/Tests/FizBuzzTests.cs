@@ -227,5 +227,49 @@ namespace Tests
             //Assert
             CollectionAssert.AreEqual(result, logic.Solve(data));
         }
+
+        [TestMethod]
+        [DataRow(11)]
+        [DataRow(19)]
+        [DataRow(37)]
+        public void Solve_ReturnsCorrectResult(object input)
+        {
+            //Arrange
+            IFizzBuzzLogic logic = new FizzBuzzLogic();
+
+            //Act
+            List<object> data = new()
+            {
+                3,5,9,15,65,8,51,99,75
+            };
+
+            List<string> result = new();
+
+            data.ForEach(a =>
+            {
+                if (a is int toProcess)
+                {
+                    if ((toProcess % 5) == 0 && (toProcess % 3) == 0)
+                    {
+                        result.Add(Constants.FizzBuzz);
+                    }
+                    else if ((toProcess % 3) == 0)
+                    {
+                        result.Add(Constants.Fizz);
+                    }
+                    else if ((toProcess % 5) == 0)
+                    {
+                        result.Add(Constants.Buzz);
+                    }
+                    else
+                    {
+                        result.Add(toProcess.ToString());
+                    }
+                }
+            });
+
+            //Assert
+            CollectionAssert.AreEqual(result, logic.Solve(data));
+        }
     }
 }
